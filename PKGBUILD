@@ -2,7 +2,7 @@
 
 pkgbase=gruvbox-theme-git
 pkgname=('gruvbox-icon-theme-git' 'gruvbox-gtk-theme-git')
-pkgver=r60.c807993c
+pkgver=r64.de4e8370
 pkgrel=1
 pkgdesc='A GTK theme based on the Gruvbox colour palette.'
 arch=('any')
@@ -31,14 +31,6 @@ package_gruvbox-icon-theme-git() {
 }
 
 package_gruvbox-gtk-theme-git() {
-    # Hotfix file name inconsistency.
-    cd "$srcdir/$pkgbase"
-    local lower_yellow_dark='themes/src/assets/gtk/thumbnails/thumbnail-Yellow-dark.png'
-    local upper_yellow_dark='themes/src/assets/gtk/thumbnails/thumbnail-Yellow-Dark.png'
-    if [[ -f "$lower_yellow_dark" ]] && [[ ! -f "$upper_yellow_dark" ]]; then
-        mv "$lower_yellow_dark" "$upper_yellow_dark"
-    fi
-
     cd "$srcdir/$pkgbase/themes"
     ./build.sh
     mkdir -p "$pkgdir/usr/share/themes"

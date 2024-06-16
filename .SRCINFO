@@ -1,6 +1,6 @@
 pkgbase = gruvbox-theme-git
 	pkgdesc = A GTK theme based on the Gruvbox colour palette.
-	pkgver = r60.c807993c
+	pkgver = r64.de4e8370
 	pkgrel = 1
 	url = https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme
 	arch = any
